@@ -9,30 +9,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
     rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <style>
     :root {
-      --accent: #3b82f6;
-      --accent-dark: #2563eb;
-      --muted: #64748b;
+      --accent: hsl(217, 91%, 60%);
+      --accent-hover: hsl(221, 83%, 53%);
+      --accent-glow: hsla(217, 91%, 60%, 0.15);
       --bg-primary: #ffffff;
       --bg-secondary: #f8fafc;
+      --bg-card: rgba(255, 255, 255, 0.7);
       --text-primary: #0f172a;
-      --text-secondary: #64748b;
-      --border: rgba(148, 163, 184, 0.2);
-      --card-bg: #ffffff;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: rgba(148, 163, 184, 0.1);
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(255, 255, 255, 0.4);
     }
 
     [data-theme="dark"] {
-      --bg-primary: #0f172a;
-      --bg-secondary: #1e293b;
-      --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
-      --border: rgba(148, 163, 184, 0.1);
-      --card-bg: #1e293b;
+      --bg-primary: #020617;
+      --bg-secondary: #0f172a;
+      --bg-card: rgba(30, 41, 59, 0.7);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.05);
+      --glass-bg: rgba(15, 23, 42, 0.6);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --accent-glow: hsla(217, 91%, 60%, 0.25);
     }
 
     * {
@@ -40,10 +47,11 @@
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
+      font-family: "Outfit", sans-serif;
       background: var(--bg-secondary);
       color: var(--text-primary);
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     h1,
@@ -53,9 +61,10 @@
     }
 
     header {
-      backdrop-filter: blur(12px);
-      background: rgba(255, 255, 255, 0.85);
-      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: var(--glass-bg);
+      border-bottom: 1px solid var(--glass-border);
     }
 
     [data-theme="dark"] header {
@@ -78,11 +87,12 @@
     }
 
     .card {
-      background: var(--card-bg);
-      border-radius: 1rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      border: 1px solid var(--border);
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1.5rem;
+      border: 1px solid var(--glass-border);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .card:hover {
@@ -449,8 +459,7 @@
             Data Analyst & Insights Expert
           </p>
           <p class="text-lg mb-8 max-w-2xl" style="color: var(--text-secondary);">
-            Transforming raw data into actionable insights through advanced analytics, visualization, and machine
-            learning. Passionate about solving complex business problems with data-driven solutions.
+            Results-driven Data Analyst and MCA candidate with proven experience delivering end-to-end analytics solutions across finance, healthcare, and retail domains. Proficient in SQL, Python, Power BI, Tableau, and Google BigQuery with a track record of analyzing 500K+ record datasets.
           </p>
           <div class="flex flex-wrap gap-4 justify-center md:justify-start">
             <a href="#contact"
@@ -462,7 +471,7 @@
               style="color: var(--text-primary);">
               View My Work
             </a>
-            <a href="Vaibhav Verma Resume [21-02-2026].pdf" target="_blank"
+            <a href="Vaibhav-Verma-Data-Analyst-Resume.pdf" target="_blank"
               class="px-8 py-3 rounded-lg font-semibold transition border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white hover:scale-105 transform flex items-center gap-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -494,14 +503,10 @@
         <div class="scroll-animate slide-in-left">
           <h3 class="text-3xl font-bold mb-4 gradient-text">Turning Data Into Decisions</h3>
           <p class="mb-4" style="color: var(--text-secondary);">
-            As a dedicated Data Analyst, I specialize in extracting meaningful insights from complex datasets. My
-            expertise spans SQL, Python, Power BI, and advanced Excel, enabling me to deliver comprehensive analytical
-            solutions.
+            As a dedicated Data Analyst and MCA candidate at KR Mangalam University, I specialize in extracting meaningful insights from complex datasets. My expertise spans SQL, Python, Power BI, and Google BigQuery, enabling me to deliver comprehensive end-to-end analytics solutions.
           </p>
           <p class="mb-6" style="color: var(--text-secondary);">
-            I'm passionate about continuous learning and staying updated with the latest tools and techniques in data
-            science. My goal is to help organizations make informed, data-driven decisions that drive growth and
-            efficiency.
+            I have a proven track record of analyzing 500,000+ record datasets across finance, healthcare, and retail domains. I am passionate about building scalable ETL pipelines, interactive dashboards, and predictive models that improve operational efficiency and support data-driven decision-making.
           </p>
           <div class="space-y-3">
             <div class="flex items-center gap-3">
@@ -511,7 +516,7 @@
                     d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                 </svg>
               </div>
-              <span style="color: var(--text-primary);" class="font-medium">BCA Graduate</span>
+              <span style="color: var(--text-primary);" class="font-medium">MCA Candidate</span>
             </div>
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -540,8 +545,8 @@
 
         <div class="grid grid-cols-2 gap-6 scroll-animate slide-in-right">
           <div class="stat-card card p-6 text-center hover:scale-105 transform transition">
-            <div class="text-4xl font-bold text-blue-600 mb-2">10+</div>
-            <div style="color: var(--text-secondary);">Projects Completed</div>
+            <div class="text-4xl font-bold text-blue-600 mb-2">6+</div>
+            <div style="color: var(--text-secondary);">End-to-End Projects</div>
           </div>
           <div class="stat-card card p-6 text-center hover:scale-105 transform transition">
             <div class="text-4xl font-bold text-blue-600 mb-2">5+</div>
@@ -552,8 +557,8 @@
             <div style="color: var(--text-secondary);">Client Satisfaction</div>
           </div>
           <div class="stat-card card p-6 text-center hover:scale-105 transform transition">
-            <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-            <div style="color: var(--text-secondary);">Learning Mode</div>
+            <div class="text-4xl font-bold text-blue-600 mb-2">99%</div>
+            <div style="color: var(--text-secondary);">Data Accuracy</div>
           </div>
         </div>
       </div>
@@ -577,6 +582,65 @@
       <div class="max-w-4xl mx-auto space-y-8">
 
 
+        <!-- Tata iQ Virtual Experience -->
+        <div class="card p-8 scroll-animate hover:scale-[1.02] transform transition mb-8">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-shrink-0">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold mb-1" style="color: var(--text-primary);">GenAI Data Analytics Simulation
+                  </h3>
+                  <p class="text-lg font-semibold text-blue-600">Tata iQ</p>
+                  <p class="text-sm" style="color: var(--text-secondary);">via Forage Platform</p>
+                </div>
+                <div class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg font-semibold text-sm">
+                  March 2026
+                </div>
+              </div>
+
+              <div class="space-y-3 mb-6" style="color: var(--text-secondary);">
+                <div class="flex gap-3">
+                  <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </svg>
+                  <p>Conducted EDA on financial datasets to identify anomalies and delinquency risk indicators, supporting credit risk strategy.</p>
+                </div>
+                <div class="flex gap-3">
+                  <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </svg>
+                  <p>Achieved <strong>85%+ accuracy</strong> in predictive models (Logistic Regression, Decision Trees) using AUC-ROC metrics.</p>
+                </div>
+                <div class="flex gap-3">
+                  <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </svg>
+                  <p>Presented analytical storytelling and data-driven recommendations to senior stakeholders.</p>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">GenAI</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold">Predictive Modeling</span>
+                <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">Storytelling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Deloitte Virtual Internship -->
         <div class="card p-8 scroll-animate hover:scale-[1.02] transform transition">
           <div class="flex flex-col md:flex-row gap-6">
@@ -599,16 +663,8 @@
                   <p class="text-sm" style="color: var(--text-secondary);">via Forage Platform</p>
                 </div>
                 <div class="px-4 py-2 bg-green-100 text-green-700 rounded-lg font-semibold text-sm">
-                  Completed
+                  Jan 2025 – Feb 2025
                 </div>
-              </div>
-
-              <div class="flex items-center gap-2 mb-4" style="color: var(--text-secondary);">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>January 2025 - February 2025</span>
               </div>
 
               <div class="space-y-3 mb-6" style="color: var(--text-secondary);">
@@ -617,48 +673,21 @@
                     <path fill-rule="evenodd"
                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                   </svg>
-                  <p>Completed rigorous job simulation focusing on data analysis and forensic technology tasks for
-                    industrial clients</p>
+                  <p>Analyzed forensic telemetry datasets containing <strong>10,000+ rows</strong> to detect anomalies and system failures.</p>
                 </div>
                 <div class="flex gap-3">
                   <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd"
                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                   </svg>
-                  <p>Analyzed large telemetry datasets (10,000+ rows) to monitor machine performance and health status
-                    using JSON structures</p>
-                </div>
-                <div class="flex gap-3">
-                  <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                  </svg>
-                  <p>Developed interactive visualizations to communicate technical insights to stakeholders</p>
+                  <p>Built client-ready dashboards and reports for communicating complex technical findings to stakeholders.</p>
                 </div>
               </div>
 
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Data
-                  Analysis</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">Forensic
-                  Technology</span>
-                <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">JSON</span>
-                <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold">Data
-                  Visualization</span>
-              </div>
-
-              <div class="p-4 rounded-lg"
-                style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);">
-                <div class="flex items-center gap-3">
-                  <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <p class="font-semibold text-green-600">Verified Completion</p>
-                    <p class="text-sm" style="color: var(--text-secondary);">Code: HoRBMswa5Cv3pafGE • Issued by Forage
-                    </p>
-                  </div>
-                </div>
+                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Forensic Tech</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">JSON</span>
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold">Stakeholder Management</span>
               </div>
             </div>
           </div>
@@ -744,12 +773,12 @@
           </div>
           <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Healthcare Analytics Dashboard</h3>
           <p class="mb-4" style="color: var(--text-secondary);">
-            Analyzing 54,000+ patient records, tracking 25+ KPIs for hospital efficiency, and reducing wait times by 15%.
+            Developed a multi-department dashboard tracking <strong>25+ hospital KPIs</strong>. Identified 3 major performance bottlenecks, reducing average patient wait time by <strong>15%</strong>.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Power BI</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Power Query</span>
-            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">DAX</span>
+            <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-xs font-semibold">SQL Root Cause</span>
+            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Healthcare Metrics</span>
           </div>
           <a href="https://github.com/vaibhavverma200421/Healthcare-Analytics-Dashboard" target="_blank"
             class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
@@ -770,12 +799,12 @@
           </div>
           <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Credit Card Data Analysis</h3>
           <p class="mb-4" style="color: var(--text-secondary);">
-            End-to-end analytics on credit card transactions using SQL and Power BI
+            Built automated ETL pipelines for credit card transaction data. Optimized SQL queries, improving reporting efficiency by <strong>35%</strong> and reducing data latency.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Power BI</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">SQL</span>
-            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">DAX</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">SQL Automation</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">ETL</span>
+            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Power BI</span>
           </div>
           <a href="https://github.com/vaibhavverma200421" target="_blank"
             class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
@@ -797,12 +826,11 @@
           </div>
           <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Walmart Data Analysis</h3>
           <p class="mb-4" style="color: var(--text-secondary);">
-            End-to-end solution using Python and SQL for business insights
+            Analyzed <strong>500,000+ transaction records</strong> using SQL and Python. Detected demand trends and reduced data processing time by <strong>40%</strong>.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Python</span>
-            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">SQL</span>
-            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">MySQL</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">Python (Pandas/NumPy)</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">SQL Aggregation</span>
           </div>
           <a href="https://github.com/vaibhavverma200421" target="_blank"
             class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
@@ -822,14 +850,14 @@
                 d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Sales Analytics Dashboard</h3>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Superstore Sales Executive Dashboard</h3>
           <p class="mb-4" style="color: var(--text-secondary);">
-            Interactive Power BI dashboard analyzing sales trends and KPIs
+            Designed an interactive dashboard with <strong>20+ DAX measures</strong>. Reduced manual reporting time by <strong>70%</strong> through automated KPI tracking.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Power BI</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">SQL</span>
-            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Excel</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Advanced DAX</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Data Modeling</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">Automation</span>
           </div>
           <a href="https://github.com/vaibhavverma200421" target="_blank"
             class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
@@ -849,14 +877,13 @@
                 d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Customer Behavior Analysis</h3>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Customer Churn Analysis Pipeline</h3>
           <p class="mb-4" style="color: var(--text-secondary);">
-            Advanced SQL queries analyzing customer patterns and trends
+            Architected an end-to-end pipeline for <strong>10,000+ records</strong>. Reduced manual reporting effort by <strong>50%</strong> and enabled targeted retention strategies.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">SQL</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">PostgreSQL</span>
-            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Python</span>
+            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold">End-to-End Pipeline</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Customer Segment</span>
           </div>
           <a href="https://github.com/vaibhavverma200421" target="_blank"
             class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
@@ -951,10 +978,11 @@
             <h3 class="text-xl font-bold" style="color: var(--text-primary);">Data Analysis</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="skill-badge floating">Excel</span>
-            <span class="skill-badge floating" style="animation-delay: 0.2s;">Power BI</span>
-            <span class="skill-badge floating" style="animation-delay: 0.4s;">Tableau</span>
-            <span class="skill-badge floating" style="animation-delay: 0.6s;">SQL</span>
+            <span class="skill-badge floating">SQL (PostgreSQL, MySQL)</span>
+            <span class="skill-badge floating" style="animation-delay: 0.2s;">Google BigQuery</span>
+            <span class="skill-badge floating" style="animation-delay: 0.4s;">Power BI (DAX)</span>
+            <span class="skill-badge floating" style="animation-delay: 0.6s;">Tableau</span>
+            <span class="skill-badge floating" style="animation-delay: 0.8s;">Excel (Advanced)</span>
           </div>
         </div>
 
@@ -993,9 +1021,9 @@
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="skill-badge floating">Scikit-learn</span>
-            <span class="skill-badge floating" style="animation-delay: 0.2s;">TensorFlow</span>
-            <span class="skill-badge floating" style="animation-delay: 0.4s;">Regression</span>
-            <span class="skill-badge floating" style="animation-delay: 0.6s;">Classification</span>
+            <span class="skill-badge floating" style="animation-delay: 0.2s;">Predictive Modeling</span>
+            <span class="skill-badge floating" style="animation-delay: 0.4s;">EDA</span>
+            <span class="skill-badge floating" style="animation-delay: 0.6s;">Statistical Analysis</span>
           </div>
         </div>
 
@@ -1054,9 +1082,9 @@
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="skill-badge floating">Git</span>
-            <span class="skill-badge floating" style="animation-delay: 0.2s;">Jupyter</span>
-            <span class="skill-badge floating" style="animation-delay: 0.4s;">VS Code</span>
-            <span class="skill-badge floating" style="animation-delay: 0.6s;">Google Colab</span>
+            <span class="skill-badge floating" style="animation-delay: 0.2s;">Docker</span>
+            <span class="skill-badge floating" style="animation-delay: 0.4s;">ETL Pipelines</span>
+            <span class="skill-badge floating" style="animation-delay: 0.6s;">REST APIs</span>
           </div>
         </div>
       </div>
@@ -1106,19 +1134,32 @@
           </div>
         </div>
 
-        <!-- Deloitte Internship -->
+        <!-- Google BigQuery -->
         <div class="card p-6 text-center scroll-animate hover:scale-105 transform transition">
           <div
-            class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 14l9-5-9-5-9 5 9 5z" />
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
             </svg>
           </div>
-          <h3 class="font-bold mb-2" style="color: var(--text-primary);">Deloitte Internship</h3>
-          <p class="text-sm mb-3" style="color: var(--text-secondary);">Data Analytics Simulation</p>
-          <div class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold inline-block">Certified
+          <h3 class="font-bold mb-2" style="color: var(--text-primary);">BigQuery for Data Analysts</h3>
+          <p class="text-sm mb-3" style="color: var(--text-secondary);">Google Cloud</p>
+          <div class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold inline-block">Cloud Certified
+          </div>
+        </div>
+
+        <!-- Data Analytics Training -->
+        <div class="card p-6 text-center scroll-animate hover:scale-105 transform transition">
+          <div
+            class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" />
+            </svg>
+          </div>
+          <h3 class="font-bold mb-2" style="color: var(--text-primary);">Data Analytics Training</h3>
+          <p class="text-sm mb-3" style="color: var(--text-secondary);">Certificate of Completion</p>
+          <div class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold inline-block">Completed
           </div>
         </div>
       </div>
@@ -1242,7 +1283,7 @@
         <!-- FOOTER -->
         <footer class="py-8" style="background: var(--bg-secondary); border-top: 1px solid var(--border);">
           <div class="max-w-7xl mx-auto px-6 text-center">
-            <p style="color: var(--text-secondary);">© 2025 Vaibhav Verma. All rights reserved.</p>
+            <p style="color: var(--text-secondary);">© 2026 Vaibhav Verma. All rights reserved.</p>
             <p class="text-sm mt-2" style="color: var(--text-secondary);">Built with passion for data analytics</p>
           </div>
         </footer>
